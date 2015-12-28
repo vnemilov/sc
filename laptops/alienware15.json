@@ -1,0 +1,18 @@
+{
+  "id": "alienware15",
+  "brand": "Alienware",
+  "model": "Alienware 15",
+  "processor": "Intel Core i7-4710HQ",
+  "video": "NVIDIA GeForce GTX 980M",
+  "ram": "8GB DDR3",
+  "hdd": "256GB SSD + 1TB",
+  "images": [
+    "img/Alienware_15.jpg",
+    "img/Alienware_15_1.jpg",
+    "img/Alienware_15_2.jpg",
+    "img/Alienware_15_3.jpg",
+    "img/Alienware_15_4.jpg",
+    "img/Alienware_15_5.jpg"
+  ],
+  "price": 4349
+}

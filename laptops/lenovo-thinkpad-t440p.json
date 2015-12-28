@@ -1,0 +1,18 @@
+{
+  "id": "lenovo-thinkpad-t440p",
+    "brand": "Lenovo",
+  "model": "Lenovo ThinkPad T440p",
+  "processor": "Intel Core i5-4210M",
+    "video": "Intel HD Graphics 4600",
+    "ram": "4GB DDR3",
+    "hdd": "500GB HDD",
+  "images": [
+    "img/ThinkPad_T440p.jpg",
+    "img/ThinkPad_T440p_1.jpg",
+    "img/ThinkPad_T440p_2.jpg",
+    "img/ThinkPad_T440p_3.jpg",
+    "img/ThinkPad_T440p_4.jpg",
+    "img/ThinkPad_T440p_5.jpg"
+  ],
+  "price": 2519
+}

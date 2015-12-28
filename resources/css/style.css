@@ -1,0 +1,184 @@
+.glyphicon.glyphicon-remove {
+	font-size: 25px;
+	cursor: pointer;
+	color: red;
+}
+
+.glyphicon.glyphicon-shopping-cart {
+	font-size: 25px;
+}
+
+.rightPanel {
+	margin-top: 50px;
+}
+
+.totalPriceForUnit {
+	width: 60px;
+	float: left;
+}
+
+.rightNavMenu {
+	padding-right: 265px;
+	font-size: 40px;
+}
+
+.thePrice {
+	color: lawngreen;
+}
+
+.leftNavMenu {
+	padding-left: 250px;
+	font-size: 25px;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.shopButton {
+	overflow: hidden;
+}
+
+html, body {
+	width: auto;
+	overflow-x: hidden;
+	background-color: #222;
+}
+
+.itemBox {
+	height: 200px;
+	background-color: white;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+.itemBox span {
+	color: #28259E;
+}
+
+.itemBox a {
+	/*text-decoration: none;*/
+	
+}
+
+/*.wrapp{*/
+/*background-color: rgba(45, 75, 94, 0.95);*/
+/*}*/
+.row {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
+.col-md-4 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.itemImage {
+	width: 200px;
+	height: 160px;
+	float: left;
+}
+
+.deviceName {
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	padding-top: 5px;
+	display: flex;
+}
+/*.container{*/
+/*width:1400px;*/
+/*}*/
+/*html body.ng-scope div.container div.ng-scope{*/
+/*width:1200px;*/
+.col-lg-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.totalPrice {
+	background: #555;
+	margin-top: 55px;
+	color: rgba(49, 115, 135, 0.95);
+}
+
+.jumbotron {
+	background: #222;
+}
+
+.jumbotron p {
+	font-size: 14px;
+}
+
+.sometable {
+	background: #555;
+	color: #03B192;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.sometable a {
+	text-decoration: none;
+	color: #03B192;
+}
+
+.sometable a:hover {
+	color: rgba(49, 115, 135, 0.95);
+}
+
+.input-group .form-control:last-child {
+	border-radius: 10px;
+	background-color: rgba(80, 80, 80, 0.95);
+	border-color: rgba(128, 128, 128, 0.85);
+	width: 200px;
+	color: #999999;
+}
+
+.sidebar-nav li a:hover {
+	border-radius: 10px;
+}
+
+.left {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 20%;
+	color: red;
+}
+
+.right {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 60%;
+	color: red;
+}
+
+.top {
+	border-bottom: thick solid rgb(11, 112, 178);
+}
+
+.left {
+	margin: 5px;
+	border-right: thin solid gray;
+}
+
+.filter {
+	margin: 10px;
+	border-bottom: thin solid rgb(218, 218, 218);
+}
+
+.container-fluid {
+	margin-top: 50px;
+}
+
+.container-fluid, .col-md-2, .col-md-12 {
+	padding-left: 0;
+	padding-right: 0;
+}

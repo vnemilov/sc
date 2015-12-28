@@ -1,0 +1,18 @@
+{
+  "id": "acer-aspire-es1-531",
+    "brand": "Acer",
+  "model": "Acer Aspire ES1-531",
+  "processor": "Intel Celeron N3150",
+    "video": "Intel HD Graphics (Braswell)",
+    "ram": "4GB DDR3",
+    "hdd": "1TB HDD",
+  "images": [
+    "img/acer_aspire_es1_531.jpg",
+    "img/acer_aspire_es1_531_1.jpg",
+    "img/acer_aspire_es1_531_2.jpg",
+    "img/acer_aspire_es1_531_3.jpg",
+    "img/acer_aspire_es1_531_4.jpg",
+    "img/acer_aspire_es1_531_5.jpg"
+  ],
+  "price": 609
+}

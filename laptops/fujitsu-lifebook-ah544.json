@@ -1,0 +1,20 @@
+{
+  "id": "fujitsu-lifebook-ah544",
+    "brand": "Fujitsu",
+  "model": "Fujitsu Lifebook AH544",
+  "processor": "Intel Core i5-4210M",
+  "memory": {
+    "video": "NVIDIA GeForce GT 720M",
+    "ram": "4GB DDR3",
+    "hdd": "1TB HDD"
+  },
+  "images": [
+    "img/Lifebook_AH544.jpg",
+    "img/Lifebook_AH544_1.jpg",
+    "img/Lifebook_AH544_2.jpg",
+    "img/Lifebook_AH544_3.jpg",
+    "img/Lifebook_AH544_4.jpg",
+    "img/Lifebook_AH544_5.jpg"
+  ],
+  "price": 1145
+}

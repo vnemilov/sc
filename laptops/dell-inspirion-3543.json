@@ -1,0 +1,18 @@
+{
+  "id": "dell-inspirion-3543",
+  "brand": "Dell",
+  "model": "Dell Inspiron 3543",
+  "processor": "Intel Core i3-5005U",
+  "video": "Intel HD Graphics 5500",
+  "ram": "4GB DDR3",
+  "hdd": "1TB HDD",
+  "images": [
+    "img/Inspiron_3543.jpg",
+    "img/Inspiron_3543_1.jpg",
+    "img/Inspiron_3543_2.jpg",
+    "img/Inspiron_3543_3.jpg",
+    "img/Inspiron_3543_4.jpg",
+    "img/Inspiron_3543_5.jpg"
+  ],
+  "price": 839
+}

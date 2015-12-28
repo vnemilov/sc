@@ -1,0 +1,18 @@
+{
+  "id": "apple-macbook-12",
+  "brand": "Apple",
+  "model": "Apple MacBook 12 Gold",
+  "processor": "Intel Core M-5Y51",
+  "video": "Intel HD Graphics 5300",
+  "ram": "8GB DDR3",
+  "hdd": "512GB SSD",
+  "images": [
+    "img/apple_macbook_12.jpg",
+    "img/apple_macbook_12_1.jpg",
+    "img/apple_macbook_12_2.jpg",
+    "img/apple_macbook_12_3.jpg",
+    "img/apple_macbook_12_4.jpg",
+    "img/apple_macbook_12_5.jpg"
+  ],
+  "price": 3595
+}
