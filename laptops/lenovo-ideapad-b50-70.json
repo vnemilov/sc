@@ -1,0 +1,18 @@
+{
+	"id": "lenovo-ideapad-b50-70",
+	"brand": "Lenovo",
+	"model": "Lenovo IdeaPad B50-70",
+	"processor": "Intel Core i3-5020U",
+	"video": "AMD Radeon R5 M330",
+	"ram": "8GB DDR3",
+	"hdd": "1TB HDD",
+	"images": [
+	           "img/ThinkPad_T440p.jpg",
+	           "img/ThinkPad_T440p_1.jpg",
+	           "img/ThinkPad_T440p_2.jpg",
+	           "img/ThinkPad_T440p_3.jpg",
+	           "img/ThinkPad_T440p_4.jpg",
+	           "img/ThinkPad_T440p_5.jpg"
+	           ],
+	           "price": 949
+}

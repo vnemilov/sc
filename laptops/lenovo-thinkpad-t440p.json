@@ -1,18 +1,16 @@
 {
-  "id": "lenovo-thinkpad-t440p",
-    "brand": "Lenovo",
-  "model": "Lenovo ThinkPad T440p",
-  "processor": "Intel Core i5-4210M",
-    "video": "Intel HD Graphics 4600",
-    "ram": "4GB DDR3",
-    "hdd": "500GB HDD",
-  "images": [
-    "img/ThinkPad_T440p.jpg",
-    "img/ThinkPad_T440p_1.jpg",
-    "img/ThinkPad_T440p_2.jpg",
-    "img/ThinkPad_T440p_3.jpg",
-    "img/ThinkPad_T440p_4.jpg",
-    "img/ThinkPad_T440p_5.jpg"
-  ],
-  "price": 2519
+	"id" : "lenovo-ideapad-b50-70",
+	"brand" : "Lenovo",
+	"model" : "Lenovo IdeaPad B50-70",
+	"processor" : "Intel Core i3-5020U",
+	"video" : "AMD Radeon R5 M330",
+	"ram" : "8GB DDR3",
+	"hdd" : "1TB HDD",
+	"images" : [ "laptops/img/ThinkPad_T440p_2.jpg",
+	             "laptops/img/ThinkPad_T440p_1.jpg",
+	             "laptops/img/ThinkPad_T440p.jpg",
+	             "laptops/img/ThinkPad_T440p_3.jpg",
+	             "laptops/img/ThinkPad_T440p_4.jpg",
+	             "laptops/img/ThinkPad_T440p_5.jpg" ],
+	             "price" : 2519
 }

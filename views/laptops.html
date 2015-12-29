@@ -1,3 +1,9 @@
-<ul>{{laptop.price}}
-    {{laptop.id}}
-</ul>
+<button class="btn btn-success"
+						ng-click="this.disabled=true;buyThis(laptop)">Buy for
+						${{laptop.price}}</button>
+						
+						<div>
+		<a ui-sref="cart">
+			<div>Total:</div>
+		</a><span class="thePrice">{{total}}</span>
+	</div>

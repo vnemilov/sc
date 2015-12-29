@@ -8,6 +8,15 @@
 	font-size: 25px;
 }
 
+ul{
+	padding-left:0;
+}
+ul li{
+	text-decoration: none;
+	list-style-type: none;
+}
+
+
 .rightPanel {
 	margin-top: 50px;
 }

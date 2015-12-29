@@ -1,177 +1,97 @@
 <div class="col-md-2">
-    <!-- Sidebar -->
-         <div class="col-md-12">
-                <section class="left" style="border-right:1px blue solid; width:auto">
-                    <div class="filter">
-                        Brand
-                        <div>
-                            <div ng-repeat="brand in brandsGroup">
-                                <input type="checkbox" ng-model="useBrands[brand]"/><span>{{brand}}</span>
-                                <span>({{ (filteredLaptops | filter:query | filter:count('brand', brand)).length }})</span>
-                            </div>
-                        </div>
-                    </div>
+	<!-- Sidebar -->
+	<div class="col-md-12">
+		<section class="left"
+			style="border-right: 1px blue solid; width: auto">
+			<div class="filter">
+				Brand
+				<ul class="term-list">
+					<li class="term-item" ng-repeat="brand in brandsGroup | orderBy:'toString()'">
+						<input type="checkbox" ng-model="useBrands[brand]" /><span>{{brand}}</span>
+						<span>({{ (filteredLaptops | filter:query |
+							filter:count('brand', brand)).length}})</span>
+					</li>
+				</ul>
+			</div>
 
-                    <div class="filter">
-                        RAM
-                        <div>
-                            <div ng-repeat="ram in ramsGroup">
-                                <b><input type="checkbox" ng-model="useRams[ram]"/>{{ram}}</b>
-                                <span>({{ (filteredLaptops | filter:query | filter:count('ram', ram)).length }})</span>
-                            </div>
-                        </div>
-                    </div>
+			<div class="filter">
+				RAM
+				<ul>
+					<li ng-repeat="ram in ramsGroup | orderBy:'toString()'">
+						<b><input type="checkbox" ng-model="useRams[ram]" />{{ram}}</b> <span>({{
+							(filteredLaptops | filter:query | filter:count('ram',
+							ram)).length }})</span>
+					</li>
+				</ul>
+			</div>
 
-                    <div class="filter">
-                        HDD
-                        <div>
-                            <div ng-repeat="hdd in hddsGroup">
-                                <b><input type="checkbox" ng-model="useHDDs[hdd]"/>{{hdd}}</b>
-                                <span>({{ (filteredLaptops | filter:query | filter:count('hdd', hdd)).length }})</span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="filter">
-                        Video
-                        <div>
-                            <div ng-repeat="video in videosGroup">
-                                <b><input type="checkbox" ng-model="useVideos[video]"/>{{video}}</b>
-                                <span>({{ (filteredLaptops | filter:query | filter:count('video', video)).length }})</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter">
-                        Processor
-                        <div>
-                            <div ng-repeat="processor in processorsGroup">
-                                <b><input type="checkbox" ng-model="useProcessors[processor]"/>{{processor}}</b>
-                                <span>({{ (filteredLaptops | filter:query | filter:count('processor', processor)).length }})</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-    <div class="container-fluid col-md-10">
-        <div>
-            <a ui-sref="cart">
-                <div>Total:</div>
-            </a><span class="thePrice">{{total}}</span>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="col-md-4" ng-repeat="laptop in filteredLaptops | orderBy:'price' | filter:filterByProperties | filter:query">
-                    <div class="itemBox">
-                        <a ui-sref="laptop({name: '{{laptop.id}}'})" class="deviceName">{{laptop.model}}</a>
-                        <a ui-sref="laptop({name: '{{laptop.id}}'})"><img ng-src="{{laptop.images[0]}}"
-                                                                          class="itemImage"></a>
+			<div class="filter">
+				HDD
+				<ul>
+					<li ng-repeat="hdd in hddsGroup | orderBy:'toString()'">
+						<b><input type="checkbox" ng-model="useHDDs[hdd]" />{{hdd}}</b> <span>({{
+							(filteredLaptops | filter:query | filter:count('hdd',
+							hdd)).length }})</span>
+					</li>
+				</ul>
+			</div>
+			<div class="filter">
+				Video
+				<ul>
+					<li ng-repeat="video in videosGroup | orderBy:'toString()'">
+						<b><input type="checkbox" ng-model="useVideos[video]" />{{video}}</b>
+						<span>({{ (filteredLaptops | filter:query |
+							filter:count('video', video)).length }})</span>
+					</li>
+				</ul>
+			</div>
+			<div class="filter">
+				Processor
+				<ul>
+					<li
+						ng-repeat="processor in processorsGroup | orderBy:'toString()'">
+						<b><input type="checkbox" ng-model="useProcessors[processor]" />{{processor}}</b>
+						<span>({{ (filteredLaptops | filter:query |
+							filter:count('processor', processor)).length }})</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</div>
+<!-- /#sidebar-wrapper -->
+<div class="container-fluid col-md-10">
+	<div>
+		<a ui-sref="cart">
+			<div>Total:</div>
+		</a><span class="thePrice">{{total}}</span>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="col-md-4"
+				ng-repeat="laptop in filteredLaptops | orderBy:'price' | filter:filterByProperties | filter:query">
+				<div class="itemBox">
+					<a ui-sref="laptop({name: '{{laptop.id}}'})" class="deviceName">{{laptop.model}}</a>
+					<a ui-sref="laptop({name: '{{laptop.id}}'})"><img
+						ng-src="{{laptop.images[0]}}" class="itemImage"></a>
 
-                        <div><span>Processor:</span> {{laptop.processor}}</div>
-                        <div><span>HDD:</span> {{laptop.hdd}}</div>
-                        <div><span>RAM:</span> {{laptop.ram}}</div>
-                        <div><span>Video:</span> {{laptop.video}}</div>
-                        <button class="btn btn-success" ng-click="this.disabled=true;messagee(laptop)">Buy for
-                            ${{laptop.price}}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-<!--         <div> -->
-<!--             <div> -->
-<!--                 <section class="left" style="border-right:1px"> -->
-<!--                     <div class="filter"> -->
-<!--                         Brand -->
-<!--                         <div> -->
-<!--                             <div ng-repeat="brand in brandsGroup"> -->
-<!--                                 <b><input type="checkbox" ng-model="useBrands[brand]"/>{{brand}}</b> -->
-<!--                                 <span>({{ (filteredLaptops | filter:query | filter:count('brand', brand)).length }})</span> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-
-<!--                     <div class="filter"> -->
-<!--                         RAM -->
-<!--                         <div> -->
-<!--                             <div ng-repeat="ram in ramsGroup"> -->
-<!--                                 <b><input type="checkbox" ng-model="useRams[ram]"/>{{ram}}</b> -->
-<!--                                 <span>({{ (filteredLaptops | filter:query | filter:count('ram', ram)).length }})</span> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-
-<!--                     <div class="filter"> -->
-<!--                         HDD -->
-<!--                         <div> -->
-<!--                             <div ng-repeat="hdd in hddsGroup"> -->
-<!--                                 <b><input type="checkbox" ng-model="useHDDs[hdd]"/>{{hdd}}</b> -->
-<!--                                 <span>({{ (filteredLaptops | filter:query | filter:count('hdd', hdd)).length }})</span> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                      <div class="filter"> -->
-<!--                         Video -->
-<!--                         <div> -->
-<!--                             <div ng-repeat="video in videosGroup"> -->
-<!--                                 <b><input type="checkbox" ng-model="useVideos[video]"/>{{video}}</b> -->
-<!--                                 <span>({{ (filteredLaptops | filter:query | filter:count('video', video)).length }})</span> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </section> -->
-<!--                 <section class="right" style="border-right:1px"> -->
-<!--                     <div> -->
-<!--                         <ul> -->
-<!--                             <li ng-repeat="laptop in filteredLaptops | filter:query"> -->
-<!--                                 <p><b>Model: {{laptop.model}}</b></p> -->
-
-<!--                                 <p>Ram Size: {{laptop.ram}} Pant Size: {{laptop.brand}} Shoe Size: -->
-<!--                                     {{laptop.hdd}}</p> -->
-<!--                             </li> -->
-<!--                         </ul> -->
-<!--                     </div> -->
-<!--                 </section> -->
-<!--             </div> -->
-
-
-<!--         </div> -->
-    </div>
-    <!-- /#page-content-wrapper -->
-
-
-<!--<div ui-view class="jumbotron text-center">-->
-<!--<a ui-sref="cart">-->
-<!--<div>Total:</div>-->
-<!--</a><span>{{total}}</span>-->
-
-<!--</div>-->
-<!--<div class="jumbotron text-center" ng-repeat="laptop in laptops">-->
-<!--<a ui-sref="laptop({name: '{{laptop.id}}'})">{{laptop.model}}</a>-->
-<!--<button ng-click="this.disabled=true;messagee(laptop)" id={{laptop.price}}>Add to cart ${{laptop.price}}</button>-->
-<!--</div>-->
-
-
-<!--<div class="container-fluid">-->
-<!--<div class="col-md-2">-->
-<!--<input ng-model="query">-->
-<!--</div>-->
-<!--<div class="col-md-12">-->
-<!--<div class="col-md-4" ng-repeat="laptop in laptops | orderBy:'price' | filter:query">-->
-<!--<div class="itemBox">-->
-<!--<a ui-sref="laptop({name: '{{laptop.id}}'})" class="deviceName">{{laptop.model}}</a>-->
-<!--<a ui-sref="laptop({name: '{{laptop.id}}'})"><img src="{{laptop.images[0]}}" class="itemImage"></a>-->
-
-<!--<div><span>Processor:</span> {{laptop.processor}}</div>-->
-<!--<div><span>HDD:</span> {{laptop.memory.hdd}}</div>-->
-<!--<div><span>RAM:</span> {{laptop.memory.ram}}</div>-->
-<!--<div><span>Video:</span> {{laptop.memory.video}}</div>-->
-<!--<button class="btn btn-success" ng-click="this.disabled=true;messagee(laptop)">Buy for-->
-<!--${{laptop.price}}-->
-<!--</button>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+					<div>
+						<span>Processor:</span> {{laptop.processor}}
+					</div>
+					<div>
+						<span>HDD:</span> {{laptop.hdd}}
+					</div>
+					<div>
+						<span>RAM:</span> {{laptop.ram}}
+					</div>
+					<div>
+						<span>Video:</span> {{laptop.video}}
+					</div>
+					<button class="btn btn-success"
+						ng-click="this.disabled=true;buy(laptop)">Buy for
+						${{laptop.price}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
