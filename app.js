@@ -52,7 +52,12 @@ routerApp.controller('AllLaptopsCtrl', function($scope, $http, CommonProp) {
 	$http.get('laptops/laptops.json').success(function(data) {
 		$scope.laptops = data;
 	});
-
+	
+	$scope.orderOptions = [{label: 'Price (low to high)', value:'price'},
+	                       {label: 'Price (high to low)', value:'-price'},
+	                       {label: 'Brand (A to Z)', value:'model'},
+	                       {label: 'Brand (Z to A)', value:'-model'}
+	];
 	// Watch the laptops that are selected
 	$scope.$watch(function() {
 		return {
@@ -183,6 +188,7 @@ routerApp.controller('AllLaptopsCtrl', function($scope, $http, CommonProp) {
 });
 routerApp.controller('LaptopCtrl', function($scope, $stateParams, $http, CommonProp) {
 	var name = $stateParams.name;
+	
 	$scope.total = CommonProp.getTotal();
 	$http.get('laptops/' + name + '.json').success(function(data) {
 		$scope.laptop = data;
@@ -251,22 +257,6 @@ routerApp.service('CommonProp', function() {
 		}
 	};
 });
-
-$('ul.term-list').each(function() {
-	if ($(this).find('li').length > 3) {
-		$('li', this).eq(2).nextAll().hide().addClass('toggleable');
-		$(this).append('<li class="more">More...</li>');
-	}
-	$(this).on('click', '.more', toggleShow);
-});
-
-function toggleShow() {
-	var opened = $(this).hasClass('less');
-	$(this).text(opened ? 'More...' : 'Less...').toggleClass('less',
-			!opened);
-	$(this).siblings('li.toggleable').slideToggle();
-}
-
 
 var uniqueItems = function(data, key) {
 	var result = [];

@@ -6,13 +6,20 @@
     "video": "Intel HD Graphics 5500",
     "ram": "4GB DDR3",
     "hdd": "500GB HDD",
-  "images": [
-    "img/Probook_450_G2.jpg",
-    "img/Probook_450_G2_1.jpg",
-    "img/Probook_450_G2_2.jpg",
-    "img/Probook_450_G2_3.jpg",
-    "img/Probook_450_G2_4.jpg",
-    "img/Probook_450_G2_5.jpg"
-  ],
+    "images" : [ "img/hp-probook-450g2/image1.jpg",
+	             "img/hp-probook-450g2/image2.jpg",
+	             "img/hp-probook-450g2/image3.jpg" ],
+	             "for": "Software engineers",
+	             "interfaces":["3x USB 3.0",
+	                           "2x USB 2.0",
+	                           "HDMI 1.4",
+	                          "Mini Display port",
+	                           "RJ-45",
+	                           "built-in microphone",
+	                           "built-in webcam"],
+	                           "opticalDevice":"DVD",
+	                           "weight":"1.95kg.",
+	                           "warranty":"3years",
+	                           "os":"Windows 10",
   "price": 1169
 }

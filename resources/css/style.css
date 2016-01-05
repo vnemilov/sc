@@ -52,7 +52,7 @@ ul li{
 html, body {
 	width: auto;
 	overflow-x: hidden;
-	background-color: #222;
+	background-color: white;
 }
 
 .itemBox {
@@ -60,6 +60,10 @@ html, body {
 	background-color: white;
 	border-radius: 10px;
 	margin: 5px;
+	border:1px solid transparent;
+}
+.itemBox:hover{
+	border:1px solid #23527c;
 }
 
 .itemBox span {
@@ -87,7 +91,7 @@ html, body {
 
 .itemImage {
 	width: 200px;
-	height: 160px;
+	height: 150px;
 	float: left;
 }
 
@@ -115,7 +119,7 @@ html, body {
 }
 
 .jumbotron {
-	background: #222;
+	background: white;
 }
 
 .jumbotron p {
@@ -157,7 +161,7 @@ html, body {
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 20%;
-	color: red;
+	color: #23527c;
 }
 
 .right {
@@ -166,7 +170,7 @@ html, body {
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 60%;
-	color: red;
+	color: #23527c;
 }
 
 .top {
@@ -184,10 +188,36 @@ html, body {
 }
 
 .container-fluid {
-	margin-top: 50px;
+	margin-top: 56px;
 }
 
 .container-fluid, .col-md-2, .col-md-12 {
 	padding-left: 0;
 	padding-right: 0;
+}
+.smallImages{
+	float:left;
+}
+.smallImages li img{
+	margin-left:5px;
+	margin-right:15px;
+	margin-top:5px;
+	margin-bottom:5px;
+	border:1px solid transparent;
+	
+}
+.smallImages li img:hover{
+	border:1px solid red;
+    transition: all 0.8s ease;
+	
+}
+#selected{
+	border:1px solid blue;
+    transition: all 1s ease;
+}
+#mainImage{
+	float:left;
+}
+.oneLaptop{
+	margin-top:40px;
 }

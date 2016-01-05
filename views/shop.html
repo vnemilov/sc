@@ -2,56 +2,52 @@
 	<!-- Sidebar -->
 	<div class="col-md-12">
 		<section class="left"
-			style="border-right: 1px blue solid; width: auto">
+			style="border-right: 1px #23527c solid; width: auto">
 			<div class="filter">
 				Brand
 				<ul class="term-list">
-					<li class="term-item" ng-repeat="brand in brandsGroup | orderBy:'toString()'">
-						<input type="checkbox" ng-model="useBrands[brand]" /><span>{{brand}}</span>
+					<li class="term-item"
+						ng-repeat="brand in brandsGroup | orderBy:'toString()'"><label><input
+						type="checkbox" ng-model="useBrands[brand]" /><span>{{brand}}</span></label>
 						<span>({{ (filteredLaptops | filter:query |
-							filter:count('brand', brand)).length}})</span>
-					</li>
+							filter:count('brand', brand)).length}})</span></li>
 				</ul>
 			</div>
 
 			<div class="filter">
 				RAM
 				<ul>
-					<li ng-repeat="ram in ramsGroup | orderBy:'toString()'">
-						<b><input type="checkbox" ng-model="useRams[ram]" />{{ram}}</b> <span>({{
+					<li ng-repeat="ram in ramsGroup | orderBy:'toString()'"><label><input
+							type="checkbox" ng-model="useRams[ram]" />{{ram}}<span></label>({{
 							(filteredLaptops | filter:query | filter:count('ram',
-							ram)).length }})</span>
-					</li>
+							ram)).length }})</span></li>
 				</ul>
 			</div>
 
 			<div class="filter">
 				HDD
 				<ul>
-					<li ng-repeat="hdd in hddsGroup | orderBy:'toString()'">
-						<b><input type="checkbox" ng-model="useHDDs[hdd]" />{{hdd}}</b> <span>({{
+					<li ng-repeat="hdd in hddsGroup | orderBy:'toString()'"><label><input
+							type="checkbox" ng-model="useHDDs[hdd]" />{{hdd}}<span></label>({{
 							(filteredLaptops | filter:query | filter:count('hdd',
-							hdd)).length }})</span>
-					</li>
+							hdd)).length }})</span></li>
 				</ul>
 			</div>
 			<div class="filter">
 				Video
 				<ul>
-					<li ng-repeat="video in videosGroup | orderBy:'toString()'">
-						<b><input type="checkbox" ng-model="useVideos[video]" />{{video}}</b>
-						<span>({{ (filteredLaptops | filter:query |
-							filter:count('video', video)).length }})</span>
-					</li>
+					<li ng-repeat="video in videosGroup | orderBy:'toString()'"><label><input
+							type="checkbox" ng-model="useVideos[video]" />{{video}}<span></label>({{
+							(filteredLaptops | filter:query | filter:count('video',
+							video)).length }})</span></li>
 				</ul>
 			</div>
 			<div class="filter">
 				Processor
 				<ul>
-					<li
-						ng-repeat="processor in processorsGroup | orderBy:'toString()'">
-						<b><input type="checkbox" ng-model="useProcessors[processor]" />{{processor}}</b>
-						<span>({{ (filteredLaptops | filter:query |
+					<li ng-repeat="processor in processorsGroup | orderBy:'toString()'">
+						<label><input type="checkbox" ng-model="useProcessors[processor]" />{{processor}}
+						<span></label>({{ (filteredLaptops | filter:query |
 							filter:count('processor', processor)).length }})</span>
 					</li>
 				</ul>
@@ -66,10 +62,12 @@
 			<div>Total:</div>
 		</a><span class="thePrice">{{total}}</span>
 	</div>
+	<select ng-model="orderProp" ng-options="opt as opt.label for opt in orderOptions"></select>
+	<input type="text" ng-model="price.price">
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="col-md-4"
-				ng-repeat="laptop in filteredLaptops | orderBy:'price' | filter:filterByProperties | filter:query">
+				ng-repeat="laptop in filteredLaptops | orderBy:orderProp.value | filter:price">
 				<div class="itemBox">
 					<a ui-sref="laptop({name: '{{laptop.id}}'})" class="deviceName">{{laptop.model}}</a>
 					<a ui-sref="laptop({name: '{{laptop.id}}'})"><img

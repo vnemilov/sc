@@ -2,21 +2,24 @@
 <html>
 <head>
 <!-- JS (load angular, ui-router, and our custom js file) -->
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script
 	src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/js/dropdown.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="app.js"></script>
-<script src="resources/css/hideMaxListItem.js"></script>
 
 <!-- CSS (load bootstrap) -->
 <link rel="stylesheet"
 	href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="resources/css/style.css">
 <!--     <link rel="stylesheet" href="resources/css/sismple-sidebar.css"> -->
+ 
 </head>
 
 <!-- apply our angular app to our site -->
@@ -34,32 +37,7 @@
 	<div class="container-fluid">
 		<div ui-view></div>
 	</div>
-	<script id="jsbin-javascript">
 
-$('ul.term-list').each(function(){
-  
-  var LiN = $(this).find('li').length;
-  
-  if( LiN > 3){    
-    $('li', this).eq(2).nextAll().hide().addClass('toggleable');
-    $(this).append('<li class="more">More...</li>');    
-  }
-  
-});
-
-
-$('ul.term-list').on('click','.more', function(){
-  
-  if( $(this).hasClass('less') ){    
-    $(this).text('More...').removeClass('less');    
-  }else{
-    $(this).text('Less...').addClass('less'); 
-  }
-  
-  $(this).siblings('li.toggleable').slideToggle();
-    
-}); 
-</script>
 
 </body>
 </html>
