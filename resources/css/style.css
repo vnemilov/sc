@@ -241,3 +241,6 @@ html, body {
 .modal-body .form-horizontal .col-sm-offset-2 {
     margin-left: 15px;
 }
+.quantity{
+	margin-right:10px;
+}
