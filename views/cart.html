@@ -7,15 +7,13 @@
 				<tr>
 					<th>Name</th>
 					<th>Quantity</th>
-					<th></th>
 					<th>Initial price</th>
 					<th>Total price</th>
 				</tr>
 				<tr ng-repeat="item in items">
 					<td><a ui-sref="laptop({name: '{{item.id}}'})">{{item.model}}</a></td>
-					<td><span class="itemCount">{{item.count}}</span></td>
 					<td><input type="number" class="quantity" id="{{item.id}}"
-						step="1" min="0" max="50" value="1" />
+						step="1" min="0" max="50" value="{{item.count}}" />
 						<button class="btn btn-success"
 							ng-click="this.disabled=true;buyMore(item)">Buy</button></td>
 					<td>${{item.price}}</td>
@@ -26,7 +24,6 @@
 			</tbody>
 			<tfoot>
 				<tr>
-					<td></td>
 					<td></td>
 					<td></td>
 					<td align="right">Total:</td>
