@@ -1,4 +1,9 @@
 <div class="container oneLaptop">
+<div class="text-right total2">
+		<a ui-sref="cart">
+			<div>Total:</div>
+		</a><span class="thePrice">${{total}}</span>
+	</div>
 	<!-- <div ng-repeat="image in laptop.images"> -->
 	<!-- <img ng-src=laptops/{{image}} style="width:200px; height:150px;"></div> -->
 	<!-- <div> -->
@@ -31,10 +36,6 @@
 			ng-click="this.disabled=true;buyThis(laptop)">Buy for
 			${{laptop.price}}</button>
 	</div>
-	<a ui-sref="cart">
-		<div>Total:</div>
-	</a> <span class="thePrice">{{total}}</span>
-
 	<div class="container">
 		<table class="table table-striped">
 			<tbody>

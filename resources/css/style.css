@@ -221,3 +221,23 @@ html, body {
 .oneLaptop{
 	margin-top:40px;
 }
+.total{
+	font-size:20px;
+	margin-right:30px;
+	margin-top:-55px;
+}
+.total2{
+	font-size:20px;
+	margin-top:-40px;
+}
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}

@@ -39,9 +39,14 @@ routerApp.controller('CartCtrl', function($scope, CommonProp) {
 		CommonProp.removeItem(laptop);
 		$scope.total = CommonProp.getTotal();
 	};
+	$scope.buyMore= function(laptop) {
+		CommonProp.addMore(laptop);
+		CommonProp.setTotal(laptop);
+		$scope.total = CommonProp.getTotal();
+	}
 });
 
-routerApp.controller('AllLaptopsCtrl', function($scope, $http, CommonProp) {
+routerApp.controller('AllLaptopsCtrl', function($scope, $http, CommonProp, $timeout) {
 
 	$scope.useBrands = {};
 	$scope.useRams = {};
@@ -170,8 +175,11 @@ routerApp.controller('AllLaptopsCtrl', function($scope, $http, CommonProp) {
 		if (!selected) {
 			filterAfterProcessors = filterAfterVideos;
 		}
+		 var delay = function() {
+				$scope.filteredLaptops = filterAfterProcessors;
+		    }
 
-		$scope.filteredLaptops = filterAfterProcessors;
+		    $timeout(delay, 200);
 	}, true);
 
 	$scope.$watch('filtered', function(newValue) {
@@ -206,6 +214,19 @@ routerApp.service('CommonProp', function() {
 	return {
 		getItems : function() {
 			return Items;
+		},
+		addMore: function(item){
+			var arr= [];
+			$("input").each(function() {
+				  arr.push($(this.id).selector);
+				});
+			for (var i = 0; i < Items.length; i++) {
+				if (Items[i].id == item.id && item.id == arr[i]) {
+					
+					Items[i].count += parseInt(document.getElementById(arr[i]).value);
+					break;
+				}
+			}
 		},
 		addItem : function(item) {
 			if (Items.length != 0) {
@@ -244,15 +265,22 @@ routerApp.service('CommonProp', function() {
 			}
 		},
 		removeItem : function(item) {
-			for (var i = 0; i < Items.length; i += 1) {
-				if (Items[i].id == item) {
-					Items.splice(i, 1);
+			var answer = confirm("Do you really want to remove this item?");
+			if(answer){
+				for (var i = 0; i < Items.length; i += 1) {
+					if (Items[i].id == item) {
+						Items.splice(i, 1);
+					}
+				}
+				Total = 0;
+				for (var i = 0; i < Items.length; i += 1) {
+					Total += Items[i].price * Items[i].count;
 				}
 			}
-			Total = 0;
-			for (var i = 0; i < Items.length; i += 1) {
-				Total += Items[i].price * Items[i].count;
+			else{
+				
 			}
+			
 
 		}
 	};
