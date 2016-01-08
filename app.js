@@ -223,7 +223,7 @@ routerApp.service('CommonProp', function() {
 			for (var i = 0; i < Items.length; i++) {
 				if (Items[i].id == item.id && item.id == arr[i]) {
 					
-					Items[i].count += parseInt(document.getElementById(arr[i]).value);
+					Items[i].count = parseInt(document.getElementById(arr[i]).value);
 					break;
 				}
 			}
