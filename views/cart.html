@@ -13,11 +13,7 @@
 				<tr ng-repeat="item in items">
 					<td><a ui-sref="laptop({name: '{{item.id}}'})">{{item.model}}</a></td>
 					<td><input type="number" class="quantity" id="{{item.id}}"
-<<<<<<< HEAD
 						step="1" min="1" max="50" value="{{item.count}}" />
-=======
-						step="1" min="0" max="50" value="{{item.count}}" />
->>>>>>> origin/master
 						<button class="btn btn-success"
 							ng-click="this.disabled=true;buyMore(item)">Buy</button></td>
 					<td>${{item.price}}</td>
